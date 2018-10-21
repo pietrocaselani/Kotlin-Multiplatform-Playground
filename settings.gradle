@@ -19,3 +19,5 @@ rootProject.name = 'Multiplatform'
 
 
 enableFeaturePreview('GRADLE_METADATA')
+
+include 'Multiplatform'
