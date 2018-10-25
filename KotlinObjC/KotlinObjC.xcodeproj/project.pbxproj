@@ -13,8 +13,7 @@
 		4FDE99B5217C4892001B4E53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE99B4217C4892001B4E53 /* Assets.xcassets */; };
 		4FDE99B8217C4892001B4E53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE99B6217C4892001B4E53 /* LaunchScreen.storyboard */; };
 		4FDE99BB217C4892001B4E53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE99BA217C4892001B4E53 /* main.m */; };
-		4FDE99C3217C50A9001B4E53 /* Multiplatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDE99C2217C50A9001B4E53 /* Multiplatform.framework */; };
-		4FDE99C8217C57D5001B4E53 /* Multiplatform.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDE99C2217C50A9001B4E53 /* Multiplatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8233C8E4218129DB00251402 /* stormshield.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8233C8E2218129D700251402 /* stormshield.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +23,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4FDE99C8217C57D5001B4E53 /* Multiplatform.framework in Copy Frameworks */,
+				8233C8E4218129DB00251402 /* stormshield.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,7 +41,7 @@
 		4FDE99B7217C4892001B4E53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FDE99B9217C4892001B4E53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FDE99BA217C4892001B4E53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4FDE99C2217C50A9001B4E53 /* Multiplatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Multiplatform.framework; path = "../build/xcode-frameworks/Multiplatform.framework"; sourceTree = "<group>"; };
+		8233C8E2218129D700251402 /* stormshield.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = stormshield.framework; path = "../stormshield/build/xcode-frameworks/stormshield.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +49,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FDE99C3217C50A9001B4E53 /* Multiplatform.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +91,7 @@
 		4FDE99C1217C50A9001B4E53 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4FDE99C2217C50A9001B4E53 /* Multiplatform.framework */,
+				8233C8E2218129D700251402 /* stormshield.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -178,7 +176,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd \"${PROJECT_DIR}/../\"\n./gradlew :packForXCode -PXCODE_CONFIGURATION=${CONFIGURATION}";
+			shellScript = "cd \"${PROJECT_DIR}/../\"\n./gradlew stormshield:packForXCode -PXCODE_CONFIGURATION=${CONFIGURATION}\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -253,7 +251,7 @@
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../build/xcode-frameworks/";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../stormshield/build/xcode-frameworks/";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -313,7 +311,7 @@
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../build/xcode-frameworks/";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../stormshield/build/xcode-frameworks/";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

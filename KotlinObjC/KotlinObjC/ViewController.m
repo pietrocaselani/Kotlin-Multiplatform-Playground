@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@import Multiplatform;
+@import stormshield;
 
 @interface ViewController ()
 
@@ -19,9 +19,11 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  NSString *name = MultiplatformPlatform.platform.name;
+  NSString *name = StormshieldPlatform.platform.name;
 
   NSLog(name, nil);
+
+    NSLog(StormshieldSampleKt.hello, nil);
 }
 
 

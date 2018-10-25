@@ -9,15 +9,13 @@ pluginManagement {
 
     repositories {
         maven { url 'http://dl.bintray.com/kotlin/kotlin-eap' }
-
         mavenCentral()
-
         maven { url 'https://plugins.gradle.org/m2/' }
+        google()
+        jcenter()
     }
 }
-rootProject.name = 'Multiplatform'
-
 
 enableFeaturePreview('GRADLE_METADATA')
 
-include 'Multiplatform'
+include ':stormshield'
