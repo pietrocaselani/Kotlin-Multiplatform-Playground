@@ -13,9 +13,10 @@ pluginManagement {
         maven { url 'https://plugins.gradle.org/m2/' }
         google()
         jcenter()
+        maven { url "https://maven.google.com" }
     }
 }
 
 enableFeaturePreview('GRADLE_METADATA')
 
-include ':stormshield'
+include ':stormshield', ':androidapp'
