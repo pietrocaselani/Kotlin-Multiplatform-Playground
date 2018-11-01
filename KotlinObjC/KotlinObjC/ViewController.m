@@ -17,13 +17,22 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
+    [super viewDidLoad];
 
-  NSString *name = StormshieldPlatform.platform.name;
+    NSString *name = StormshieldPlatform.platform.name;
 
-  NSLog(name, nil);
+    NSLog(name, nil);
 
     NSLog(StormshieldSampleKt.hello, nil);
+
+    StormshieldPerson *person = [[StormshieldPerson alloc] initWithName:@"Pietro" age:25];
+    NSLog([person show], nil);
+
+    StormshieldPersonViewState *viewState1 = [StormshieldSampleKt createViewStatePerson:person];
+    NSLog(NSStringFromClass([viewState1 class]), nil);
+
+    StormshieldPersonViewState *viewState2 = [StormshieldSampleKt createViewStatePerson:nil];
+    NSLog(NSStringFromClass([viewState2 class]), nil);
 }
 
 
